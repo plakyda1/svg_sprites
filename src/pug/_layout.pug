@@ -1,0 +1,18 @@
+- var px = '/img/px.png'
+
+doctype html
+html(lang="ru-RU")
+	block head
+		include ./_includes/_head/_head.pug
+	body
+		.wrapper
+			.maincontent
+				block header
+					include ./_includes/_layout/_header.pug
+				main
+					block main
+						include ./_includes/_layout/_main.pug
+			block footer
+				include ./_includes/_layout/_footer.pug
+		block script
+			include ./_includes/_layout/_script.pug

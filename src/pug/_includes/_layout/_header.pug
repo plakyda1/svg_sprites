@@ -1,0 +1,13 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/sprites/sprite.svg#" + name)
+header.header
+	h1 header
+	.img
+		+icon('facebook', 'facebook_blue')
+		+icon('design')
+		+icon('clock')
+
+
+

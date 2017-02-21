@@ -1,0 +1,84 @@
+// bourbon lib
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+
+@mixin inlineblock {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@mixin border-radius($radius: 5px) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+       -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+}
+
+@mixin box-shadow($string) {
+    -webkit-box-shadow: $string;
+       -moz-box-shadow: $string;
+            box-shadow: $string;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+
+@mixin opacity($opacity: 1) {
+    $ieOpacity: $opacity * 100;
+        filter: "alpha(opacity=$ieOpacity)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ieOpacity)";
+    opacity: $opacity;
+}
+
+@mixin placecolor($color: black) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin transform($transforms) {
+       -moz-transform: $transforms;
+         -o-transform: $transforms;
+        -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+            transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+         -o-transform-origin: $origin;
+        -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+            transform-origin: $origin;
+}
+
+@mixin breakpoint($width) {
+    @media only screen and (max-width: ($width / 16) + em) {
+        @content;
+    }
+}

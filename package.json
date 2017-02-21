@@ -1,0 +1,35 @@
+{
+  "name": "Salem",
+  "version": "0.0.1",
+  "description": "Boilerplate",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xeonalex/salem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-changed": "latest",
+    "gulp-clean": "^0.3.2",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-rigger": "^0.5.8",
+    "gulp-uncss": "latest",
+    "gulp-watch": "latest",
+    "gulp-zip": "^3.2.0"
+  },
+  "dependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-pug": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest"
+  }
+}
